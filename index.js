@@ -24,7 +24,7 @@ import tutorialsRoutes from './src/routes/Staffs/tutorials.js';
 import classesRoutes from './src/routes/Staffs/classes.js';
 
 const app = express();
-const PORT = "5000";
+const PORT = "10000";
 
 app.use(express.json());
 app.use(cors());
