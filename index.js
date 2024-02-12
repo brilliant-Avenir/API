@@ -7,7 +7,7 @@ import studentsAuthRoutes from './src/routes/Students/auth.js';
 
 import pupilRoutes from './src/routes/Students/pupil.js';
 import billsRoutes from './src/routes/Students/bills.js';
-import resultsRoutes from './src/routes/Students/results.js'; 
+import resultsRoutes from './src/routes/Staffs/results.js'; 
 import elearningRoutes from './src/routes/Students/elearning.js';
 import newsletterRoutes from './src/routes/Students/newsletter.js';
 import assignment2Routes from "./src/routes/Students/assignment.js";
@@ -29,6 +29,8 @@ const PORT = "10000";
 app.use(express.json());
 app.use(cors());
 
+app.use('/results', resultsRoutes);
+
 app.use('/staffs/login', staffsAuthRoutes);
 app.use('/students/login', studentsAuthRoutes);
 
@@ -36,7 +38,6 @@ app.use('/pupils', pupilRoutes);
 app.use('/assignment2', assignment2Routes)
 app.use('/students/bills', billsRoutes);
 app.use('/students/newsletter', newsletterRoutes);
-app.use('/students/results', resultsRoutes);
 app.use('/students/elearning', elearningRoutes);
 
 app.use('/staffs', staffsRoutes);
